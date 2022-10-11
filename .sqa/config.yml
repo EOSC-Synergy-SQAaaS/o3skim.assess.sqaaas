@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    git.scc.kit.edu/synergy.o3as/o3skim:
+      branch: main
+      repo: https://git.scc.kit.edu/synergy.o3as/o3skim
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.4
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      git.scc.kit.edu/synergy.o3as/o3skim git:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-cornflower-skunk.sh
+        container: qc.acc_sunny-ultramarine-audemer
+  QC.Doc:
+    repos:
+      git.scc.kit.edu/synergy.o3as/o3skim find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-puce-maltese.sh
+        container: qc.doc_snoopy-purple-emu
+      git.scc.kit.edu/synergy.o3as/o3skim git:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-cinnamon-emu.sh
+        container: qc.doc_blurry-wisteria-otter
+      git.scc.kit.edu/synergy.o3as/o3skim markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-linen-cockroach.sh
+        container: qc.doc_homey-seashell-heron
+      git.scc.kit.edu/synergy.o3as/o3skim restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-bronze-wasp.sh
+        container: qc.doc_homey-heliotrope-cuscus
+  QC.Lic:
+    repos:
+      git.scc.kit.edu/synergy.o3as/o3skim licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-auburn-lizard.sh
+        container: qc.lic_shabby-turquoise-gar
+  QC.Sec:
+    repos:
+      git.scc.kit.edu/synergy.o3as/o3skim bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-cornflower-argentino.sh
+        container: qc.sec_hazy-firebrick-rottweiler
+  QC.Sty:
+    repos:
+      git.scc.kit.edu/synergy.o3as/o3skim flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-white-kangaroo.sh
+        container: qc.sty_breezy-xanthic-abyssinian
+      git.scc.kit.edu/synergy.o3as/o3skim jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-purple-beaver.sh
+        container: qc.sty_pasty-taupe-warthog
+  QC.Ver:
+    repos:
+      git.scc.kit.edu/synergy.o3as/o3skim get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-pear-lemur.sh
+        container: qc.ver_gamy-orange-caiman
+timeout: 1800
