@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/o3skim git:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-apricot-lynx.sh
-        container: qc.acc_sleazy-chartreuse-lionfish
+        - /usr/bin/env sh .sqa/script.leaky-azure-lemur.sh
+        container: qc.acc_lovely-brown-gopher
   QC.Doc:
     repos:
       github.com/EOSC-synergy/o3skim find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-cinnamon-toad.sh
-        container: qc.doc_homely-amethyst-wrasse
+        - /usr/bin/env sh .sqa/script.skinny-scarlet-echidna.sh
+        container: qc.doc_frumpy-cyan-tarantula
       github.com/EOSC-synergy/o3skim git:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-bistre-tetra.sh
-        container: qc.doc_frumpy-orchid-quail
+        - /usr/bin/env sh .sqa/script.shaggy-alizarin-coral.sh
+        container: qc.doc_nerdy-olive-akita
       github.com/EOSC-synergy/o3skim markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-cerulean-mastiff.sh
-        container: qc.doc_muzzy-platinum-binturong
+        - /usr/bin/env sh .sqa/script.beady-flax-kingfisher.sh
+        container: qc.doc_wheezy-gold-eleuth
       github.com/EOSC-synergy/o3skim restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-scarlet-paradise.sh
-        container: qc.doc_lovely-ruby-squid
+        - /usr/bin/env sh .sqa/script.bluesy-zucchini-albatross.sh
+        container: qc.doc_hilly-copper-shrimp
   QC.Lic:
     repos:
       github.com/EOSC-synergy/o3skim licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-buff-beaver.sh
-        container: qc.lic_surly-seashell-vole
+        - /usr/bin/env sh .sqa/script.sickly-smalt-woodpecker.sh
+        container: qc.lic_frumpy-pink-ibis
   QC.Met:
     repos:
       github.com/EOSC-synergy/o3skim validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-jade-chinchilla.sh
-        container: qc.met_pasty-sapphire-rat
+        - /usr/bin/env sh .sqa/script.stealthy-corn-quoll.sh
+        container: qc.met_stealthy-tangerine-snake
   QC.Sec:
     repos:
       github.com/EOSC-synergy/o3skim bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-sangria-albatross.sh
-        container: qc.sec_geeky-puce-forest
+        - /usr/bin/env sh .sqa/script.squeaky-cyan-gar.sh
+        container: qc.sec_stinky-lilac-dragon
   QC.Sty:
     repos:
       github.com/EOSC-synergy/o3skim flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-gold-monster.sh
-        container: qc.sty_boozy-plum-horse
+        - /usr/bin/env sh .sqa/script.smelly-lime-cockroach.sh
+        container: qc.sty_blurry-firebrick-fowl
       github.com/EOSC-synergy/o3skim jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-purple-vole.sh
-        container: qc.sty_muggy-olive-avocet
+        - /usr/bin/env sh .sqa/script.chewy-cyan-lion.sh
+        container: qc.sty_snoopy-bronze-tortoise
   QC.Ver:
     repos:
       github.com/EOSC-synergy/o3skim get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-coral-chinook.sh
-        container: qc.ver_nippy-magnolia-woodlouse
+        - /usr/bin/env sh .sqa/script.wiggy-wheat-cichlid.sh
+        container: qc.ver_scaly-peach-flounder
 timeout: 1800
